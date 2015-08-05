@@ -45,6 +45,14 @@ body {
 
 }
 
+/* toolbar */
+.toolbar {
+  background-color: #212121;
+  color: #fff;
+  padding: 3px;
+}
+
+/* days */
 .day {
   width: 14%;
   height: 100px;
