@@ -15,14 +15,24 @@ function calendar() {
       var start = year - 20,
         end = year + 20,
         yearsArray = [];
-
       for (var i = start; i < end; i++) {
         yearsArray.push(start);
         start++;
       };
-
       return yearsArray;
     }
+    
+    $scope.updateCalendar = function() {
+      console.log($scope.selectedMonth + ', ' + $scope.selectedYear);
+      $scope.calendarRange = CalendarRange.getMonthlyRange(new Date($scope.selectedYear, $scope.selectedMonth));
+      $scope.currentMonth = $filter('date')($scope.calendarRange.start,'M') - 1;
+      $scope.currentYear = parseInt($filter('date')($scope.calendarRange.start,'y'));
+      $scope.years = getYears($scope.currentYear);
+    }
+
+
+
+
   }
 
   return {
