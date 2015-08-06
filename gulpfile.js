@@ -13,16 +13,14 @@ gulp.task('browser-sync', function() {
     });
 });
 
-var files = ['app/assets/**/*',
+var files = ['app/main.css',
             'app/countries-list/*',
             'app/country-detail/*',
             'app/home/*',
-            'app/bower_components/angular/angular.min.js',
-            'app/bower_components/angular-route/angular-route.min.js',
-            'app/bower_components/angular-animate/angular-animate.min.js',
-            'app/index.html',
-            'app/app.js',
-            'app/countries.js'
+            'app/bower_components/angular/angular.js',
+            'app/utilities/calendar-range/calendarRange.js',
+            'app/*.html',
+            'app/*.js'
             ];
 
 gulp.task('build', function() {
